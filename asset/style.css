@@ -1,0 +1,111 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+@media (min-width: 577px){
+    .gridContainer{
+        display: grid;
+        grid-template-areas:
+        "aside nav"
+        "aside main"
+        "footer main";
+    }
+    
+    
+    .navbar{
+        grid-area: nav;
+        background-color: #4c7996;
+        color: #FFFFFF;
+        text-align: center;
+    }
+    
+    .aside{
+        grid-area: aside;
+        background-color: #4a75e9;
+        height: 100vh;
+        width: 15vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .main{
+        grid-area: main;
+        background-color: #f0f0f0;
+        background-color: white;
+        width: 85vw;
+        display: grid;
+        grid-template-columns:auto auto auto;
+        gap: 15px;
+        padding: 15px;
+    }
+    
+    .footer{    
+        grid-area: footer;
+        background-color: #2c2e9e;
+        text-align: center;
+    }
+    
+    .card{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: solid 1px black;
+        justify-content: space-between;
+    }
+    
+    .card img{
+        height:250px;
+        width: 150px;
+    }
+    
+    .card button{
+        background-color: #4c7996;
+        color: #FFFFFF;
+        height: 7%;
+        width: 100%;
+    }
+}
+
+@media(max-width: 576px)
+{
+    .gridContainer{
+        display: grid;
+        grid-template-areas:
+        "aside "
+        "nav "
+        "main"
+        "footer ";
+    }
+    .navbar{
+        grid-area: nav;
+        background-color: #4c7996;
+        color: #FFFFFF;
+        text-align: center;
+    }
+    
+    .aside{
+        grid-area: aside;
+        background-color: #4a75e9;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .main{
+        grid-area: main;
+        background-color: #f0f0f0;
+        background-color: white;
+        width: 85vw;
+        display: grid;
+        gap: 15px;
+        padding: 15px;
+    }
+    
+    .footer{    
+        grid-area: footer;
+        background-color: #2c2e9e;
+        text-align: center;
+    }
+}
